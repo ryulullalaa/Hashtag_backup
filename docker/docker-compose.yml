@@ -1,0 +1,25 @@
+version: '2.1'
+
+services:
+
+  node-exporter:
+    hostname: node-exporter
+    container_name: node-exporter
+    image: gyeongtae/node-exporter:0.01
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - 9500:9500
+
+  cadvisor:
+    hostname: cadvisor
+    container_name: cadvisor
+    image: gcr.io/cadvisor/cadvisor:latest
+    ports:
+    - 9600:8080
+    volumes:
+    - /var/run:/var/run:ro
+    - /sys:/sys:ro
+    - /var/lib/docker/:/var/lib/docker:ro
+    - /var/run/docker.sock:/var/run/docker.sock:ro
