@@ -3,7 +3,7 @@ HashTag is a container image integrity verification system.
 HashTag implements integrity verification by mapping the layer meta information and layer data included in the Docker image with hash values.
 
 
-<img src="./flowchart.png"  width="600" height="600">
+<img src="./flowchart_1.png"  width="600" height="600">
 
 # Getting started with Docker
 * Crawl docker image   
